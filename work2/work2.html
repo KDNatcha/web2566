@@ -1,19 +1,26 @@
-<html>
+<html class="a-fullscreen">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 
 <body>
     <a-scene>
         <a-assets>
-            <img src="./img2/sky.jpg" id="sky">
-            <img src="" id="mypic">
+            <img id="sky" src="./img2/sky.jpg">
+            <img id="mypic" src="">
         </a-assets>
         <a-text value="work2" position="0 -5 -2.2"
             animation="property:position; to: 0 1.5 -2.2; dur: 2000; easing: linear; loop: false; text"></a-text>
         <a-sky color="#ECFFFF" src="#sky" radius="40" material geometry scale></a-sky>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-camera camera position look-controls wasd-controls>
+            <a-cursor material raycaster cursor geometry position></a-cursor>
+        </a-camera>
+        <a-box position="0 0 0" width="1" height="1" rotation="0 45 0" color="#FFC65D" material geometry></a-box>
+        <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" data-engine="tree.js r158" width="652"
+            height="2048"></canvas>
     </a-scene>
 </body>
 
